@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/data/mongo
+        http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+<!-- MongoDB -->
+
+	<mongo:mongo host="${app.config.mongo.host}" port="${app.config.mongo.port}" />
+	<mongo:repositories base-package="co.sdm.repository" mongo-template-ref="mongoTemplate"/>
+
+	<bean id="userCredentials" class="org.springframework.data.authentication.UserCredentials">
+		<constructor-arg name="username" value="${app.config.mongo.user}" />
+    <constructor-arg name="password" value="${app.config.mongo.password}" />
+	</bean>
+
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="mongo" />
+		<constructor-arg name="databaseName" value="${app.config.mongo.databasename}" />
+		<constructor-arg ref="userCredentials" />
+	</bean>
+
+<!-- end of MongoDB -->
+
+</beans>
