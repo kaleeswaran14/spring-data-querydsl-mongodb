@@ -1,4 +1,4 @@
-package co.sdm;
+package co.javatoday.springdata.mongodb;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,9 +7,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.domain.Sort;
 
-import co.sdm.domain.QUser;
-import co.sdm.domain.User;
-import co.sdm.service.Service;
+import co.javatoday.springdata.mongodb.domain.QUser;
+import co.javatoday.springdata.mongodb.domain.User;
+import co.javatoday.springdata.mongodb.service.Service;
 
 /**
  * Hello world!

@@ -1,4 +1,4 @@
-package co.sdm.repository;
+package co.javatoday.springdata.mongodb.repository;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.transaction.annotation.Transactional;
 
-import co.sdm.domain.User;
+import co.javatoday.springdata.mongodb.domain.User;
 
 /**
  * 

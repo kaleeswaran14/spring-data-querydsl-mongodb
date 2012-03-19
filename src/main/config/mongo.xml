@@ -10,7 +10,7 @@
 <!-- MongoDB -->
 
 	<mongo:mongo host="${app.config.mongo.host}" port="${app.config.mongo.port}" />
-	<mongo:repositories base-package="co.sdm.repository" mongo-template-ref="mongoTemplate"/>
+	<mongo:repositories base-package="co.javatoday.springdata.mongodb.repository" mongo-template-ref="mongoTemplate"/>
 
 	<bean id="userCredentials" class="org.springframework.data.authentication.UserCredentials">
 		<constructor-arg name="username" value="${app.config.mongo.user}" />

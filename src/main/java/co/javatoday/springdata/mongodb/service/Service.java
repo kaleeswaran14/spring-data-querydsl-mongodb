@@ -1,4 +1,4 @@
-package co.sdm.service;
+package co.javatoday.springdata.mongodb.service;
 
 import java.util.List;
 

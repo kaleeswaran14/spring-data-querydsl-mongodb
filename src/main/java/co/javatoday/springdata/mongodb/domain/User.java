@@ -1,4 +1,4 @@
-package co.sdm.domain;
+package co.javatoday.springdata.mongodb.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;

@@ -1,4 +1,4 @@
-package co.sdm.service;
+package co.javatoday.springdata.mongodb.service;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import co.sdm.domain.User;
-import co.sdm.repository.UserRepository;
+import co.javatoday.springdata.mongodb.domain.User;
+import co.javatoday.springdata.mongodb.repository.UserRepository;
 
 import com.mysema.query.types.Predicate;
 
@@ -20,7 +20,7 @@ import com.mysema.query.types.Predicate;
  */
 
 @Service("userService")
-public class UserService implements co.sdm.service.Service<User> {
+public class UserService implements co.javatoday.springdata.mongodb.service.Service<User> {
 
 	@Autowired
 	UserRepository userRepository;
